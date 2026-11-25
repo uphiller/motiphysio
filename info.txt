@@ -1,0 +1,11 @@
+docker run -d --name exam-inference --gpus all -p 8080:8080 \
+  --read-only --tmpfs /tmp:rw,nosuid,nodev,size=2048m --shm-size=1024m \
+  uphiller/pose3d_reference_custom
+
+curl -s -i http://43.200.174.28:8080/health   # ready 후 200
+
+curl -s \
+  -H "X-Request-Id: test-001" \
+  -H "Content-Type: image/jpeg" \
+  --data-binary @000000000436.jpg \
+  http://43.200.174.28:8080/infer | python3 -m json.tool
