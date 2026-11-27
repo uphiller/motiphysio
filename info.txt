@@ -10,4 +10,4 @@ curl -s \
   --data-binary @000000000436.jpg \
   http://43.200.174.28:8080/infer | python3 -m json.tool
 
-1234
+https://claude.ai/oauth/authorize?z-UCi_LA2NBPsYKQrA9nGlYf4rRth53GeczJcnoH557VM
