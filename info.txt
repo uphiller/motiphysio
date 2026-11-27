@@ -1,4 +1,4 @@
-docker run -d --name exam-inference --gpus all -p 8080:8080 \
+7docker run -d --name exam-inference --gpus all -p 8080:8080 \
   --read-only --tmpfs /tmp:rw,nosuid,nodev,size=2048m --shm-size=1024m \
   uphiller/pose3d_reference_custom
 
@@ -11,3 +11,5 @@ curl -s \
   http://43.200.174.28:8080/infer | python3 -m json.tool
 
 https://claude.ai/oauth/authorize?z-UCi_LA2NBPsYKQrA9nGlYf4rRth53GeczJcnoH557VM
+
+IeMsrsv8aEqXsUeka0GFaFsD8jyBX6g60tPbMGevOcK3YjSF#UCi_LA2NBPsYKQrA9nGlYf4rRth53GeczJcnoH557VM
